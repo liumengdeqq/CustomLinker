@@ -983,13 +983,13 @@ static soinfo *
 load_library(const char *name)
 {
     int fd = open_library(name);
+    
     int cnt;
     unsigned ext_sz;
     unsigned req_base;
     const char *bname;
     soinfo *si = NULL;
     Elf32_Ehdr *hdr;
-    
     if(fd == -1) {
         DL_ERR("Library '%s' not found", name);
         return NULL;
@@ -1749,6 +1749,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved){
     if(si!=NULL){
         DL_ERR("success");
     }
+    xor_code(si->base);
     jint (*real_JNI_OnLoad)(JavaVM*, void*);
     real_JNI_OnLoad = (jint (*)(JavaVM*, void*))(dlsym(si,"JNI_OnLoad"));
     if(real_JNI_OnLoad == NULL){

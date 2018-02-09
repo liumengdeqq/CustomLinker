@@ -1749,9 +1749,9 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved){
     if(si!=NULL){
         DL_ERR("success");
     }
-    xor_code(si->base);
+    // xor_code(si->base);
     jint (*real_JNI_OnLoad)(JavaVM*, void*);
-    real_JNI_OnLoad = (jint (*)(JavaVM*, void*))(dlsym(si,"JNI_OnLoad"));
+    real_JNI_OnLoad = (jint (*)(JavaVM*, void*))(gbdlsym(si,"JNI_OnLoad"));
     if(real_JNI_OnLoad == NULL){
      DL_ERR("cannot find sym %s\n", "JNI_OnLoad");
     }

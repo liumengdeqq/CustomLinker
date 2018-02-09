@@ -13,6 +13,8 @@
 
 7.实现jni_onload函数代码加密
 
+8.实现android4.4的动态加载so 但是不能解密jni_onload method加密内容
+
 希望通过开源使自身代码更牢固
 
 参考tk大神

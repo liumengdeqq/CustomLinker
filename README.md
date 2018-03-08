@@ -1,19 +1,7 @@
 # CustomLinker
-1.去掉dlopen加载 android在7.0之后dlopen不返回 soinfo 使用 本身的find_library
+1.master版本实现android 4.1版本自定义linker加载so和method 内容加解密
 
-2.现在实现32位
-
-3.在获取so的根内存地址时候用本身进程中的maps文件中的地址
-
-4.使用的是4.1.2的android源码linker
-
-5.使用的华为g520 4.1.2的系统测试成功
-
-6.可以给予自定义linker进行自身加固
-
-7.实现jni_onload函数代码加密
-
-8.实现android4.4的动态加载so 但是不能解密jni_onload method加密内容
+2.4.4版本实现 android4.1和android4.4 实现自定义linker
 
 希望通过开源使自身代码更牢固
 

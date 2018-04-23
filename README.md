@@ -5,3 +5,11 @@
 2.实现工具是android studio3.0以上 和ndk16版本以上
 
 3.libfoo.so是没有加密的so libdata.so是加固之后的so
+
+参考TK大神
+
+https://bbs.pediy.com/thread-216119.htm
+
+https://bbs.pediy.com/thread-191649.htm
+
+https://bbs.pediy.com/thread-197512.htm

@@ -1,3 +1,4 @@
+https://bbs.pediy.com/thread-226667.htm
 
 1.实现动态load so 实现data段进行加密 
 
